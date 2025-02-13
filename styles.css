@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff5f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 🔹 HEADER */
+header {
+    text-align: center;
+    background: linear-gradient(135deg, #D0407B, #ED9DC0);
+    color: white;
+    padding-top: 160px; /* Augmenté pour éviter le chevauchement */
+    padding-bottom: 20px; /* Ajouté pour un meilleur espacement */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 LOGO */
+.logo-container {
+    position: relative;
+    margin-top: -50px; /* Remonte légèrement le logo */
+    z-index: 10;
+}
+
+header .logo {
+    display: block;
+    margin: 0 auto;
+    width: 120px;  /* Augmenté pour un meilleur rendu */
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 🔹 TITRE & SLOGAN */
+header h1 {
+    margin-top: 10px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    font-weight: normal;
+    color: white;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 16px;
+    color: #fff;
+}
+
+/* 🔹 NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; /* Ajusté pour meilleure répartition */
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 70px; /* Hauteur ajustée pour éviter qu'elle ne cache le logo */
+}
+
+/* 🔹 NAVIGATION */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e91e63;
+}
+
+/* 🔹 MENU BURGER POUR MOBILE */
+.burger {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 80px; /* Réduit sur mobile */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+#apropos {
+    background: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.apropos-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.apropos-img {
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.apropos-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.apropos-text p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #444;
+}
+.home-link {
+    text-decoration: none;
+    color: inherit; /* Garde la couleur du texte par défaut */
+    transition: color 0.3s ease;
+}
+
+.home-link:hover {
+    color: #8D958A; /* Change la couleur au survol */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+h2 {
+    color: #D0407B;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.service {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.service:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+    background: #fff0f5;
+}
+
+.service a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.photo {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    color: #D0407B;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-link i {
+    font-size: 24px;
+}
+
+.contact-link:hover {
+    color: #FFD700;
+}
+
+footer {
+    background: #D0407B;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.footer-container .social-link {
+    color: white; /* Texte blanc */
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-container .social-link:hover {
+    color: #FFD700; /* Changement de couleur au survol */
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+/* Effet de transition global */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Amélioration des sections */
+section {
+    background: white;
+    padding: 40px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+}
+
+/* Titres harmonisés */
+h2 {
+    font-size: 2.5em;
+    color: #D0407B;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Amélioration des listes */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.2em;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Boutons attractifs */
+button, .btn {
+    background: #D0407B;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover, .btn:hover {
+    background: #ED9DC0;
+    transform: scale(1.05);
+}
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.cookie-banner button {
+    background-color: #ED9DC0;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.cookie-banner button:hover {
+    background-color: #ED9DC0;
+}
+
+/* Amélioration du footer */
+footer {
+    background: #D0407B;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 1.1em;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Amélioration des liens sociaux */
+.social-link {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-link:hover {
+    color: #FFD700;
+}
+/* 🔹 Alignement des prix en colonnes */
+.prestations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.prestation {
+    flex: 1;
+    min-width: 300px; /* Assure une bonne répartition */
+}
+
+/* 🔹 Alignement des items (nom + prix) */
+.prestation-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+}
